@@ -45,4 +45,13 @@ public class GirlService {
             throw new GirlException(ResultEnum.MIDDLE_ERROR);
         }
     }
+
+    /**
+     * 通过Id查询一个女生的信息
+     * @param id
+     * @return
+     */
+    public Girl FindById(Integer id) {
+        return girlRepository.findById(id).get();
+    }
 }
